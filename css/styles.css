@@ -1,0 +1,140 @@
+
+body{
+    background-color: black;
+}
+#splash{
+    transform: translate(-50%,-50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 25rem;
+}
+
+.splashToFadeOut{
+    animation: fadeOut 4s forwards;
+}
+
+@-webkit-keyframes fadeOut{
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+@keyframes fadeOut{
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+.cont-f1{
+    display: none;
+  }
+
+
+.navbar{
+    padding-top: 15px;
+    padding-bottom:4.5rem;
+}
+.navbar-brand{
+    font-size: 2.5rem;
+    font-family: Noto serif;
+    font-weight:bold;
+    color: #ff3399 !important;
+}
+
+@media only screen and (max-width: 600px){
+    .navbar-brand{
+        font-size: 1.7rem;
+        font-family: Noto serif;
+        font-weight:bold;
+    }
+
+}
+
+.navbar-toggler{
+    width: 20px;
+    height: 20px;
+    position: relative;
+    transition: 0.5sec ease-in-out;
+}
+
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler:icon:focus{
+    outline: none;
+    box-shadow: none;
+    border: 0;
+}
+.navbar-toggler span{
+    margin: 0;
+    padding: 0;
+}
+
+
+.toggler-icon{
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: #ff3399;
+    border-radius: 1px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+}
+
+.middle-bar{
+    margin-top: 0px;
+}
+
+/*when Navigation is clicked*/
+.navbar-toggler .top-bar{
+    margin-top: 0px;
+    transform: rotate(135deg);
+}
+
+.navbar-toggler .middle-bar{
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+.navbar-toggler .bottom-bar{
+    margin-top: 0px;
+    transform: rotate(-135deg);
+}
+
+/*state when the navbar is collapsed*/
+.navbar-toggler.collapsed .top-bar{
+    margin-top: -20px;
+    transform: rotate(0deg);
+}
+
+.navbar-toggler.collapsed .middle-bar{
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+.navbar-toggler.collapsed .bottom-bar{
+    margin-top: 20px;
+    transform: rotate(0deg);
+}
+
+/* Gradient of # lines*/
+/*.navbar-toggler.collapsed .toggler-icon{
+
+}*/
+
+.nav-item{
+    padding:0 18px;
+    font-weight: bold;
+}
+
+.nav-link{
+    font-size: 1.2rem;
+    font-family: Montserrat light;
+    color: #ff3399 !important;
+}
+
+.collapse.in{
+    display: block;
+}
